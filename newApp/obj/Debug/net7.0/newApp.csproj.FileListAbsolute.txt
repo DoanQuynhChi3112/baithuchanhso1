@@ -1,0 +1,14 @@
+C:\PhatTrienPhanMemQuanLy\NewApp\bin\Debug\net7.0\newApp.exe
+C:\PhatTrienPhanMemQuanLy\NewApp\bin\Debug\net7.0\newApp.deps.json
+C:\PhatTrienPhanMemQuanLy\NewApp\bin\Debug\net7.0\newApp.runtimeconfig.json
+C:\PhatTrienPhanMemQuanLy\NewApp\bin\Debug\net7.0\newApp.dll
+C:\PhatTrienPhanMemQuanLy\NewApp\bin\Debug\net7.0\newApp.pdb
+C:\PhatTrienPhanMemQuanLy\NewApp\obj\Debug\net7.0\newApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\PhatTrienPhanMemQuanLy\NewApp\obj\Debug\net7.0\newApp.AssemblyInfoInputs.cache
+C:\PhatTrienPhanMemQuanLy\NewApp\obj\Debug\net7.0\newApp.AssemblyInfo.cs
+C:\PhatTrienPhanMemQuanLy\NewApp\obj\Debug\net7.0\newApp.csproj.CoreCompileInputs.cache
+C:\PhatTrienPhanMemQuanLy\NewApp\obj\Debug\net7.0\newApp.dll
+C:\PhatTrienPhanMemQuanLy\NewApp\obj\Debug\net7.0\refint\newApp.dll
+C:\PhatTrienPhanMemQuanLy\NewApp\obj\Debug\net7.0\newApp.pdb
+C:\PhatTrienPhanMemQuanLy\NewApp\obj\Debug\net7.0\newApp.genruntimeconfig.cache
+C:\PhatTrienPhanMemQuanLy\NewApp\obj\Debug\net7.0\ref\newApp.dll

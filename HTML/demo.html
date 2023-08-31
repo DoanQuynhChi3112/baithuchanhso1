@@ -2,61 +2,45 @@
 <html>
 <head>
 <style>
-table {
-  font-family: arial, sans-serif;
+table, th, td {
+  border: 1px solid black;
   border-collapse: collapse;
-  width: 100%;
 }
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
+th, td {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
 }
 </style>
 </head>
 <body>
 
-<h2>HTML Table</h2>
+<h2>Cellpadding - top - bottom - left - right </h2>
+<p>We can specify different padding for all fours sides of the cell content.</p>
 
-<table>
+<table style="width:100%">
   <tr>
-    <th>Name</th>
-    <th>Number student</th>
-    <th>Country</th>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
   </tr>
   <tr>
-    <td>Doan Thi Quynh Chi</td>
-    <td>2021050114</td>
-    <td>PT</td>
+    <td>Doan Thi </td>
+    <td>Quynh Chi</td>
+    <td>20</td>
   </tr>
   <tr>
-    <td>Nguyen Van A</td>
-    <td>2031050000</td>
-    <td>HN</td>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
   </tr>
   <tr>
-    <td>Ernst Handel</td>
-    <td>32467355</td>
-    <td>Austria</td>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
   </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>45537858</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td> Bacchus Winecellars</td>
-    <td>243658363</td>
-    <td>Canada</td>
-  </tr>
- 
 </table>
 
 </body>
 </html>
-

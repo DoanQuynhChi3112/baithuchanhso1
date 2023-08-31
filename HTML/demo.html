@@ -2,27 +2,18 @@
 <html>
 <body>
 
-<h1>My First JavaScript</h1>
-<p>Here, a JavaScript changes the value of the src (source) attribute of an image.</p>
+<h2>Using a Relative File Path</h2>
+<h3>2021050114</h3>
+<img src="../images/picture.jpg" alt="Mountain" style="width:300px">
 
-<script>
-function light(sw) {
-  var pic;
-  if (sw == 0) {
-    pic = "pic_bulboff.gif"
-  } else {
-    pic = "pic_bulbon.gif"
-  }
-  document.getElementById('myImage').src = pic;
-}
-</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
 
-<img id="myImage" src="pic_bulboff.gif" width="100" height="180">
-
-<p>
-<button type="button" onclick="light(1)">Light On</button>
-<button type="button" onclick="light(0)">Light Off</button>
-</p>
+<h2>Using a Relative File Path</h2>
+<img src="images/picture.jpg" alt="Mountain" style="width:300px">
 
 </body>
 </html>

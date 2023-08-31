@@ -2,18 +2,25 @@
 <html>
 <body>
 
-<h2>Custom Iframe Border</h2>
-<p>With CSS, you can also change the size, style and color of the iframe's border:</p>
+<h2>Use JavaScript to Change Text</h2>
+<p>This example writes "Hello 2021050114!" into an HTML element with id="demo":</p>
 
-<iframe src="demo_iframe.htm" style="border:2px solid red;" title="Iframe Example"></iframe>
-<hr>
-<h2>Iframe - Target for a Link</h2>
+<p id="demo"></p>
 
-<iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
+<script>
+document.getElementById("demo").innerHTML = "Hello 2021050114!";
+</script> 
+<p id="demo">JavaScript can change the style of an HTML element.</p>
 
-<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+<script>
+function myFunction() {
+  document.getElementById("demo").style.fontSize = "25px"; 
+  document.getElementById("demo").style.color = "red";
+  document.getElementById("demo").style.backgroundColor = "yellow";        
+}
+</script>
 
-<p>When the target attribute of a link matches the name of an iframe, the link will open in the iframe.</p>
+<button type="button" onclick="myFunction()">Click Me!</button>
 
 </body>
 </html>

@@ -10,14 +10,15 @@ public class Program
         a = Convert.ToInt32(Console.ReadLine());
         System.Console.Write(" b = ");
         b = Convert.ToInt32(Console.ReadLine());
-        if(a < b)
-        {
-            System.Console.WriteLine(a + "<" + b);
-        }else if (a > b){
-            System.Console.WriteLine(a + ">" + b);
-        }else if (a == b){
-            System.Console.WriteLine(a + "=" + b);
-        }
+         int c=a-b;
+        int d=a*b;
+        int e=a/b;
+        int f=a%b;
+        System.Console.WriteLine("gia tri cua c= " +c);
+        System.Console.WriteLine("gia tri cua d= " +d);
+        System.Console.WriteLine("gia tri cua e= " +e,"va phan du la: "+f);
+        System.Console.WriteLine("va phan du la: "+f);
+
     
     }
 

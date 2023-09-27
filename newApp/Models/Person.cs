@@ -11,7 +11,7 @@ namespace NewApp.Models
         return yearOfBirth;
     }
 
-    public void Display()
+    public void HienThi()
     {
         System.Console.WriteLine("{0} + {1} + {2}" , FullName, Address, Age);
     }

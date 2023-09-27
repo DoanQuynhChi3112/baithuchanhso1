@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PhatTrienPhanMemQuanLy\\newApp\\newApp.csproj": {}
+    "C:\\PhatTrienPhanMemQuanLy\\NewApp\\newApp.csproj": {}
   },
   "projects": {
-    "C:\\PhatTrienPhanMemQuanLy\\newApp\\newApp.csproj": {
+    "C:\\PhatTrienPhanMemQuanLy\\NewApp\\newApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PhatTrienPhanMemQuanLy\\newApp\\newApp.csproj",
+        "projectUniqueName": "C:\\PhatTrienPhanMemQuanLy\\NewApp\\newApp.csproj",
         "projectName": "newApp",
-        "projectPath": "C:\\PhatTrienPhanMemQuanLy\\newApp\\newApp.csproj",
+        "projectPath": "C:\\PhatTrienPhanMemQuanLy\\NewApp\\newApp.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\PhatTrienPhanMemQuanLy\\newApp\\obj\\",
+        "outputPath": "C:\\PhatTrienPhanMemQuanLy\\NewApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"

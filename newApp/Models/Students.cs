@@ -20,7 +20,7 @@
         return yearOfBirth;
     }
 
-        // pulic void Display()
+        // pulic void HienThi()
         //     {
                 
         //         System.Console.WriteLine("{0}-{1}-{2} ",Name, Address, StudentID);

@@ -10,7 +10,7 @@ namespace NewApp.Models
         {
             FullName = "Ho Ten ";
             Address ="Dia chi";
-            EmployeeID ="Ma nhan vien";
+            EmployeeID ="Ma nv";
         }
         public int TinhLuong(int LuongCB)
             {
@@ -19,6 +19,6 @@ namespace NewApp.Models
                 return Luong;
             }
          
- }
+    }
  } 
         

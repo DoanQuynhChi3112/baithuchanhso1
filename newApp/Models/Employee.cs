@@ -1,45 +1,29 @@
-using System.Security.Cryptography;
-
 namespace NewApp.Models
  {
  public class Employee {
         public string FullName {get;set;}
         public string Address {get; set;}
-        public string EmployeeID {get; set;}
-        public int Age{get; set;}
-
-        // phuong thuc co gia tri tra ve-Employee
-        public Employee()
-        {
-            FullName = "Ho Ten ";
-            Address ="Dia chi";
-            EmployeeID ="Ma nv";
-            Age = "Tuoi"
+        public int EmployeeID {get; set;}
+        //try...catch-Emp
+        public void NhapThongTin(){
+                System.Console.Write("Full name = ");
+                FullName = Console.ReadLine();
+                System.Console.Write("Address = ");
+                Address = Console.ReadLine();
+                
+                System.Console.WriteLine("EmployeeID");
+                
+                try{
+                    EmployeeID = Convert.ToInt16(Console.ReadLine());
+                } catch(Exception e)
+                {
+                    EmployeeID = 0;
+                }
         }
-        public void Nhapthongtin()
-        {
-            System.Console.WriteLine( "Ho ten = ");
-            FullName = Console.ReadLine();
-            System.Console.WriteLine(" Dia Chi = ");
-            Address = Console.ReadLine();
-            System.Console.WriteLine(" Ma nv");
-            EmployeeID = Console.ReadLine();
-            System.Console.WriteLine("Tuoi");
-            try{
-                Age = Convert.ToInt16(Console.ReadLine());
-            }catch(Exception e )
-            {
-                Age = 0;
-            }
-            
-            }
-        
-        public int TinhLuong(int LuongCB)
-            {
-                int Luong = LuongCB + 120000;
-                return Luong;
-            }
-         
-    }
- 
-        
+        public void HienThi()
+         {
+             System.Console.WriteLine("{0}-{1}-{2}", FullName, Address, EmployeeID);
+         }
+ }
+// DoanThiQuynhChi - 2021050114
+ }    

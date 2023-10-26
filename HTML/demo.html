@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-a:link, a:visited {
-  background-color: #f44336;
-  color: white;
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-a:hover, a:active {
-  background-color: blue;
-}
-</style>
-</head>
 <body>
+2021050114
+<h2>Using The id Attribute in JavaScript</h2>
+<p>JavaScript can access an element with a specified id by using the getElementById() method:</p>
 
-<h2>Link Button</h2>
-<p>Name : Doan Thi Quynh Chi </p>
-<a href="default.asp" target="_blank">Save Link </a>
+<h1 id="myHeader">Hello World!</h1>
+<button onclick="displayResult()">Change text</button>
+
+<script>
+function displayResult() {
+  document.getElementById("myHeader").innerHTML = "Have a nice day -  2021050114!";
+}
+</script>
 
 </body>
 </html>
-

@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Firtmvc.Controllers;
 
-public class DemoController : Controller
+public class EmployeeController : Controller
 {
     public IActionResult Index()
     {
@@ -11,7 +11,7 @@ public class DemoController : Controller
     [HttpPost]
     public IActionResult Index(string fname, string email)
     {
-        string strResult = "Xin chao : " + fname + " - " + email;
+        string strResult = "Xin chao : " + fname.ToUpper() + " - " + email;
         ViewBag.Nhandulieu = strResult;
         return View();
     }

@@ -2,13 +2,15 @@
 <html>
 <body>
 
-<h1>The input placeholder attribute</h1>
+<h1>The input autofocus attribute</h1>
 
-<p>The placeholder attribute specifies a short hint that describes the expected value of an input field.</p>
+<p>The autofocus attribute specifies that the input field should automatically get focus when the page loads.</p>
 
 <form action="/action_page.php">
-  <label for="phone">Enter a phone number:</label>
-  <input type="tel" id="phone" name="phone" placeholder="2021050114" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" autofocus><br>
+  <label for="lname">Last name:</label>2021050114<br>
+  <input type="text" id="lname" name="lname"><br><br>
   <input type="submit" value="Submit">
 </form>
 

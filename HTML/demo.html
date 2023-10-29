@@ -2,17 +2,18 @@
 <html>
 <body>
 
-<h1>The input maxlength attribute</h1>
+<h1>The input multiple attributes</h1>
 
-<p>The maxlength attribute specifies the maximum number of characters allowed in an input field:</p>
+<p>The multiple attribute specifies that the user is allowed to enter more than one value in an input field.</p>
 
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" size="50"> 2021050114<br>
-  <label for="pin">PIN:</label><br>
-  <input type="text" id="pin" name="pin" maxlength="4" size="4"><br><br>
+  <label for="files">Select files:</label>
+  <input type="file" id="files" name="files" multiple><br><br>
   <input type="submit" value="Submit">
 </form>
 
+<p>To select multiple files, hold down the CTRL or SHIFT key while selecting.</p>
+//2021050114 - Quynh Chi 
 </body>
 </html>
+

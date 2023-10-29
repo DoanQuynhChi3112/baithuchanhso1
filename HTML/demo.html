@@ -2,18 +2,16 @@
 <html>
 <body>
 
-<h1>The input multiple attributes</h1>
+<h1>The input placeholder attribute</h1>
 
-<p>The multiple attribute specifies that the user is allowed to enter more than one value in an input field.</p>
+<p>The placeholder attribute specifies a short hint that describes the expected value of an input field.</p>
 
 <form action="/action_page.php">
-  <label for="files">Select files:</label>
-  <input type="file" id="files" name="files" multiple><br><br>
+  <label for="phone">Enter a phone number:</label>
+  <input type="tel" id="phone" name="phone" placeholder="2021050114" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
   <input type="submit" value="Submit">
 </form>
 
-<p>To select multiple files, hold down the CTRL or SHIFT key while selecting.</p>
-//2021050114 - Quynh Chi 
 </body>
 </html>
 

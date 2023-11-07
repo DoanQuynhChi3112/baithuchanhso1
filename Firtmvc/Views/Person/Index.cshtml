@@ -1,14 +1,44 @@
 
-    <form asp-action="Index" class="w3-container">
-    
-      <label>PersonID</label></p>
-      <input class="w3-input w3-border w3-round" name="ID" type="text" placeholder="Enter ID"></p>   
-      <label>fullname</label></p>
-      <input class="w3-input w3-border w3-round" name="fullname" type="text" placeholder="Enter fullname"></p>
-      <label>Address</label></p>
-      <input class="w3-input w3-border w3-round" name="adress" type="text" ></p>
-      <input type="submit" value="Sign in"/>
-    </form>
-  </div>
-</div>
-<h1>@ViewBag.Nhapthongtin</h1>
+    @model IEnumerable<Firtmvc.Models.Person>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PersonID">Edit</a> |
+               
+                <a asp-action="Delete" asp-route-id="@item.PersonID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

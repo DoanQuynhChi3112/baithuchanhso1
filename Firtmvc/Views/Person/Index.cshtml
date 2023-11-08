@@ -1,6 +1,5 @@
-
-    @model IEnumerable<Firtmvc.Models.Person>
-
+@model IEnumerable<Firtmvc.Models.Person>
+//2021050114
 @{
     ViewData["Title"] = "Index";
 }
@@ -16,7 +15,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.FullName)
             </th>
-           
             <th>
                 @Html.DisplayNameFor(model => model.Address)
             </th>
@@ -29,13 +27,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.FullName)
             </td>
-            
             <td>
                 @Html.DisplayFor(modelItem => item.Address)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.PersonID">Edit</a> |
-               
+                <a asp-action="Details" asp-route-id="@item.PersonID">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.PersonID">Delete</a>
             </td>
         </tr>

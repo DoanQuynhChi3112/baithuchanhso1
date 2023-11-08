@@ -11,6 +11,7 @@ namespace Firtmvc.Data{
         public ApplicationDbcontext(DbContextOptions<ApplicationDbcontext> options) : base(options)
         {}
         public DbSet<Person> Person { get; set;}
+        public DbSet<Firtmvc.Models.HeThongPhanPhoi> HeThongPhanPhoi { get; set; } = default!;
 
 
     }

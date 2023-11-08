@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+//2021050114
 namespace Firtmvc.Models{
     [Table("Person")]
     public class Person{

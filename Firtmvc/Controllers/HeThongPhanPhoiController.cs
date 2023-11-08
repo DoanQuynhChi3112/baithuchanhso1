@@ -7,90 +7,90 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Firtmvc.Data;
 using Firtmvc.Models;
-
+//2021050114
 namespace Firtmvc.Controllers
 {
-    public class PersonController : Controller
+    public class HeThongPhanPhoiController : Controller
     {
         private readonly ApplicationDbcontext _context;
 
-        public PersonController(ApplicationDbcontext context)
+        public HeThongPhanPhoiController(ApplicationDbcontext context)
         {
             _context = context;
         }
 
-        // GET: Person
+        // GET: HeThongPhanPhoi
         public async Task<IActionResult> Index()
         {
-              return _context.Person != null ? 
-                          View(await _context.Person.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbcontext.Person'  is null.");
+              return _context.HeThongPhanPhoi != null ? 
+                          View(await _context.HeThongPhanPhoi.ToListAsync()) :
+                          Problem("Entity set 'ApplicationDbcontext.HeThongPhanPhoi'  is null.");
         }
 
-        // GET: Person/Details/5
+        // GET: HeThongPhanPhoi/Details/5
         public async Task<IActionResult> Details(string id)
         {
-            if (id == null || _context.Person == null)
+            if (id == null || _context.HeThongPhanPhoi == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.Person
-                .FirstOrDefaultAsync(m => m.PersonID == id);
-            if (person == null)
+            var heThongPhanPhoi = await _context.HeThongPhanPhoi
+                .FirstOrDefaultAsync(m => m.MaHTPP == id);
+            if (heThongPhanPhoi == null)
             {
                 return NotFound();
             }
 
-            return View(person);
+            return View(heThongPhanPhoi);
         }
 
-        // GET: Person/Create
+        // GET: HeThongPhanPhoi/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Person/Create
+        // POST: HeThongPhanPhoi/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PersonID,FullName,Address")] Person person)
+        public async Task<IActionResult> Create([Bind("MaHTPP,TenHTPP")] HeThongPhanPhoi heThongPhanPhoi)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(person);
+                _context.Add(heThongPhanPhoi);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(person);
+            return View(heThongPhanPhoi);
         }
 
-        // GET: Person/Edit/5
+        // GET: HeThongPhanPhoi/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
-            if (id == null || _context.Person == null)
+            if (id == null || _context.HeThongPhanPhoi == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.Person.FindAsync(id);
-            if (person == null)
+            var heThongPhanPhoi = await _context.HeThongPhanPhoi.FindAsync(id);
+            if (heThongPhanPhoi == null)
             {
                 return NotFound();
             }
-            return View(person);
+            return View(heThongPhanPhoi);
         }
 
-        // POST: Person/Edit/5
+        // POST: HeThongPhanPhoi/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("PersonID,FullName,Address")] Person person)
+        public async Task<IActionResult> Edit(string id, [Bind("MaHTPP,TenHTPP")] HeThongPhanPhoi heThongPhanPhoi)
         {
-            if (id != person.PersonID)
+            if (id != heThongPhanPhoi.MaHTPP)
             {
                 return NotFound();
             }
@@ -99,12 +99,12 @@ namespace Firtmvc.Controllers
             {
                 try
                 {
-                    _context.Update(person);
+                    _context.Update(heThongPhanPhoi);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PersonExists(person.PersonID))
+                    if (!HeThongPhanPhoiExists(heThongPhanPhoi.MaHTPP))
                     {
                         return NotFound();
                     }
@@ -115,49 +115,49 @@ namespace Firtmvc.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(person);
+            return View(heThongPhanPhoi);
         }
 
-        // GET: Person/Delete/5
+        // GET: HeThongPhanPhoi/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
-            if (id == null || _context.Person == null)
+            if (id == null || _context.HeThongPhanPhoi == null)
             {
                 return NotFound();
             }
 
-            var person = await _context.Person
-                .FirstOrDefaultAsync(m => m.PersonID == id);
-            if (person == null)
+            var heThongPhanPhoi = await _context.HeThongPhanPhoi
+                .FirstOrDefaultAsync(m => m.MaHTPP == id);
+            if (heThongPhanPhoi == null)
             {
                 return NotFound();
             }
 
-            return View(person);
+            return View(heThongPhanPhoi);
         }
 
-        // POST: Person/Delete/5
+        // POST: HeThongPhanPhoi/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.Person == null)
+            if (_context.HeThongPhanPhoi == null)
             {
-                return Problem("Entity set 'ApplicationDbcontext.Person'  is null.");
+                return Problem("Entity set 'ApplicationDbcontext.HeThongPhanPhoi'  is null.");
             }
-            var person = await _context.Person.FindAsync(id);
-            if (person != null)
+            var heThongPhanPhoi = await _context.HeThongPhanPhoi.FindAsync(id);
+            if (heThongPhanPhoi != null)
             {
-                _context.Person.Remove(person);
+                _context.HeThongPhanPhoi.Remove(heThongPhanPhoi);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PersonExists(string id)
+        private bool HeThongPhanPhoiExists(string id)
         {
-          return (_context.Person?.Any(e => e.PersonID == id)).GetValueOrDefault();
+          return (_context.HeThongPhanPhoi?.Any(e => e.MaHTPP == id)).GetValueOrDefault();
         }
     }
 }

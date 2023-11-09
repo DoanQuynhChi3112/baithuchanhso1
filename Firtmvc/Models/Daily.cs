@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Firtmvc.Models{
     [Table("Daily")]
     public class Daily : HeThongPhanPhoi{
-        [Key]
+      
         public String MaDaily { get; set; }
         public String TenDaily { get; set; }
         public String DiaChi { get; set; }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Firtmvc.Migrations
 {
     [DbContext(typeof(ApplicationDbcontext))]
-    [Migration("20231108155232_Create_table_HeThongPhanPhoi")]
+    [Migration("20231109100021_Create_table_HeThongPhanPhoi")]
     partial class Create_table_HeThongPhanPhoi
     {
         /// <inheritdoc />
@@ -18,6 +18,20 @@ namespace Firtmvc.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
+
+            modelBuilder.Entity("Firtmvc.Models.HeThongPhanPhoi", b =>
+                {
+                    b.Property<string>("MaHTPP")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("TenHTPP")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("MaHTPP");
+
+                    b.ToTable("HeThongPhanPhoi");
+                });
 
             modelBuilder.Entity("Firtmvc.Models.Person", b =>
                 {

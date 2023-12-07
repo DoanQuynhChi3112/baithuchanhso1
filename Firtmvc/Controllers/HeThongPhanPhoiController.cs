@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Firtmvc.Data;
 using Firtmvc.Models;
-//2021050114
+
 namespace Firtmvc.Controllers
 {
     public class HeThongPhanPhoiController : Controller

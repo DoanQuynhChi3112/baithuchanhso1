@@ -8,5 +8,6 @@ namespace Firtmvc.Models{
         [Key]
         public String MaHTPP { get; set; }
         public String TenHTPP { get; set; }
+         
     }
 }

@@ -10,6 +10,8 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Firtmvc
 build_property.RootNamespace = Firtmvc
 build_property.ProjectDir = C:\PhatTrienPhanMemQuanLy\Firtmvc\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
@@ -42,6 +44,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/PhatTrienPhanMemQuanLy/Firtmvc/Views/Daily/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFpbHlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PhatTrienPhanMemQuanLy/Firtmvc/Views/Employee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PhatTrienPhanMemQuanLy/Firtmvc/Views/Employee/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PhatTrienPhanMemQuanLy/Firtmvc/Views/Employee/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/PhatTrienPhanMemQuanLy/Firtmvc/Views/Employee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/PhatTrienPhanMemQuanLy/Firtmvc/Views/Employee/Index.cshtml]

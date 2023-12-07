@@ -10,14 +10,31 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Firtmvc.Migrations
 {
     [DbContext(typeof(ApplicationDbcontext))]
-    [Migration("20231109100801_Create_table_Daily")]
-    partial class Create_table_Daily
+    [Migration("20231116153126_Create_table_Emloyee")]
+    partial class Create_table_Emloyee
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
+
+            modelBuilder.Entity("Firtmvc.Models.Employee", b =>
+                {
+                    b.Property<string>("EmployeeID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Age")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("EmployeeID");
+
+                    b.ToTable("Employee");
+                });
 
             modelBuilder.Entity("Firtmvc.Models.HeThongPhanPhoi", b =>
                 {
@@ -65,6 +82,9 @@ namespace Firtmvc.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("HeThongPhanPhoiTempId1")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("MaDaily")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -77,16 +97,24 @@ namespace Firtmvc.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.HasIndex("HeThongPhanPhoiTempId1");
+
                     b.ToTable("Daily");
                 });
 
             modelBuilder.Entity("Firtmvc.Models.Daily", b =>
                 {
+                    b.HasOne("Firtmvc.Models.HeThongPhanPhoi", "HeThongPhanPhoi")
+                        .WithMany()
+                        .HasForeignKey("HeThongPhanPhoiTempId1");
+
                     b.HasOne("Firtmvc.Models.HeThongPhanPhoi", null)
                         .WithOne()
                         .HasForeignKey("Firtmvc.Models.Daily", "MaHTPP")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("HeThongPhanPhoi");
                 });
 #pragma warning restore 612, 618
         }

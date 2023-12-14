@@ -1,3 +1,5 @@
+using System.Xml.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Firtmvc.Data;
 using Firtmvc.Models;
 using Firtmvc.Models.Process;
+using X.PagedList;
 
 namespace Firtmvc.Controllers
 {
@@ -22,6 +25,11 @@ namespace Firtmvc.Controllers
         private ExcelProcess _excelPro = new ExcelProcess();
 
         // GET: Person
+        public async Task<IActionResult> Index(int? page)
+        {
+            var model = _context.Person.ToList().ToPagedList(page ?? 1, 5);
+            return View(model);
+        }   
         public async Task<IActionResult> Index()
         {
               return _context.Person != null ? 

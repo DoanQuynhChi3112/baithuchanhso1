@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Firtmvc.Data;
 using Firtmvc.Models;
+using X.PagedList;
 
 namespace Firtmvc.Controllers
 {
@@ -20,13 +21,12 @@ namespace Firtmvc.Controllers
         }
 
         // GET: Employee
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page)
         {
-              return _context.Employee != null ? 
-                          View(await _context.Employee.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbcontext.Employee'  is null.");
-        }
-
+            var model = _context.Employee.ToList().ToPagedList(page ?? 1, 5);
+            return View(model);
+        }  
+        
         // GET: Employee/Details/5
         public async Task<IActionResult> Details(string id)
         {

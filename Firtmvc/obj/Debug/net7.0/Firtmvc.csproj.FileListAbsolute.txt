@@ -285,3 +285,7 @@ C:\PhatTrienPhanMemQuanLy\Firtmvc\bin\Debug\net7.0\System.Security.Cryptography.
 C:\PhatTrienPhanMemQuanLy\Firtmvc\bin\Debug\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\PhatTrienPhanMemQuanLy\Firtmvc\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\PhatTrienPhanMemQuanLy\Firtmvc\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\PhatTrienPhanMemQuanLy\Firtmvc\bin\Debug\net7.0\JetBrains.Annotations.dll
+C:\PhatTrienPhanMemQuanLy\Firtmvc\bin\Debug\net7.0\X.PagedList.dll
+C:\PhatTrienPhanMemQuanLy\Firtmvc\bin\Debug\net7.0\X.PagedList.Mvc.Core.dll
+C:\PhatTrienPhanMemQuanLy\Firtmvc\obj\Debug\net7.0\Firtmvc.MvcApplicationPartsAssemblyInfo.cs

@@ -25,16 +25,13 @@ namespace Firtmvc.Controllers
         private ExcelProcess _excelPro = new ExcelProcess();
 
         // GET: Person
+          
         public async Task<IActionResult> Index(int? page)
         {
             var model = _context.Person.ToList().ToPagedList(page ?? 1, 5);
             return View(model);
-        }   
-        public async Task<IActionResult> Index()
-        {
-              return _context.Person != null ? 
-                          View(await _context.Person.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbcontext.Person'  is null.");
+                         //View(await _context.Person.ToListAsync()) :
+                          //Problem("Entity set 'ApplicationDbcontext.Person'  is null.");
         }
 
         // GET: Person/Details/5
